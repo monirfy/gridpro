@@ -48,6 +48,8 @@ img{
 .container{
     max-width: 1170px;
     margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .section-padding{
