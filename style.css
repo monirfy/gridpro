@@ -21,6 +21,7 @@ body{
     background-color: #fff;
     margin: 0;
     padding: 0;
+    font-size: 16px;
     font-family: 'Fira Sans', sans-serif;
 
 }
@@ -69,6 +70,12 @@ img{
     margin-bottom: 50px;
 }
 
+@media (max-width: 768px){
+    .heading h2{
+        font-size: 36px;
+    }
+}
+
 .btn{
     background: var(--primary);
     color: var(--light);
@@ -100,6 +107,7 @@ img{
     align-items: center;
     padding: 20px 30px;
 }
+
 
 .navbar__logo{
     justify-self: start;
@@ -142,6 +150,22 @@ img{
 .main-menu ul li a:hover{
     color: var(--primary);
 }
+
+@media (max-width: 768px){
+    .navbar{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .navbar__logo{
+        justify-self: center;
+    }
+    .navbar__menu{
+        justify-self: center;
+    }
+    
+    .main-menu {
+        margin-top: 20px;
+    }
+}
 /* Intro */
 
 .hero-section{
@@ -168,7 +192,16 @@ img{
     margin-bottom: 30px;
 }
 
-
+@media (max-width: 768px){
+    .hero{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .hero__text {
+        order: 2;
+        margin-top: 50px;
+        text-align: center;
+    }
+}
 
 /* About */
 .about{
@@ -206,9 +239,35 @@ img{
 }
 .about__text p{
     margin-bottom: 20px;
+    line-height: 1.7;
 }
 .about__text .btn{
     margin-top: 50px;
+}
+
+@media (max-width: 768px){
+
+    .about__img-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .about__img-2{
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .about__img-3{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3; 
+    }
+    .about__text{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        text-align: center;
+    }
 }
 /* Clients */
 .clients{
